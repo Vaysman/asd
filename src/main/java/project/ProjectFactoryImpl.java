@@ -1,9 +1,5 @@
 package project;
 
-import project.Project;
-import project.ProjectEntity;
-import project.ProjectFactory;
-
 import java.nio.file.Path;
 
 /**
