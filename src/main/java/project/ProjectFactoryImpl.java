@@ -7,7 +7,7 @@ import java.nio.file.Path;
  */
 public class ProjectFactoryImpl implements ProjectFactory {
     @Override
-    public Project create(String name, Path path, Path pathOut, Path pathSource) {
-        return new ProjectEntity(name, path, pathOut, pathSource);
+    public Project create(String name, Path path) {
+        return new ProjectEntity(name, path);
     }
 }
