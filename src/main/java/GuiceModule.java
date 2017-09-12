@@ -1,9 +1,6 @@
 import com.google.inject.AbstractModule;
 import com.google.inject.assistedinject.FactoryModuleBuilder;
-import project.Project;
-import project.ProjectEntity;
-import project.ProjectFactory;
-import project.ProjectFactoryImpl;
+import project.*;
 
 /**
  * Created by mrchebik on 9/11/17.
@@ -11,8 +8,11 @@ import project.ProjectFactoryImpl;
 public class GuiceModule extends AbstractModule {
     @Override
     protected void configure() {
-        bind(Project.class).to(ProjectEntity.class);
-        bind(ProjectFactory.class).to(ProjectFactoryImpl.class);
+        // этот бинд не нужен так как используется фабрика
+        // bind(Project.class).to(ProjectEntity.class);
+
+        // это добавил, что бы показать как отличаются Inject и Assisted
+        bind(Dummy.class).to(DummyImpl.class);
 
         install(new FactoryModuleBuilder()
                 .implement(Project.class, ProjectEntity.class)
