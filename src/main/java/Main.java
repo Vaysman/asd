@@ -1,5 +1,5 @@
 import javafx.application.Application;
-import view.Place;
+import place.Place;
 
 /**
  * Created by mrchebik on 9/12/17.

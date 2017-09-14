@@ -1,4 +1,4 @@
-package view;
+package place;
 
 import com.airhacks.afterburner.views.FXMLView;
 
