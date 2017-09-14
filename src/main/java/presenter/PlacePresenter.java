@@ -1,6 +1,7 @@
 package presenter;
 
 import javafx.fxml.FXML;
+import view.Place;
 
 import javax.inject.Inject;
 
@@ -8,12 +9,12 @@ import javax.inject.Inject;
  * Created by mrchebik on 9/14/17.
  */
 public class PlacePresenter {
-    @Inject private view.Place Place;
+    @Inject private Place place;
 
     @FXML private void clicked() {
-        System.out.println(Place);
-        System.out.println(Place.getStage());
+        System.out.println(place);
+        System.out.println(place.getStage());
 
-        Place.close();
+        place.close();
     }
 }
